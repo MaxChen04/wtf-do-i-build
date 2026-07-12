@@ -4,21 +4,41 @@ Turn a real lead into a project worth building before spending time coding the w
 
 This is a local-first Agent Skills package, not a hosted application. It works with Codex, Claude Code, Cursor, and other compatible hosts. Its five skills take you from a lead to an approved project:
 
-1. `/setup` records private local preferences and available tools.
-2. `/brainstorm` turns evidence into a few grounded directions.
-3. `/prd` turns selected directions into reviewed, resumable PRDs.
-4. `/create-projects` makes one local repository per approved PRD.
-5. `/build-project` is copied into each created project and resumes the first unfinished PRD step.
+1. `setup` records private local preferences and available tools.
+2. `brainstorm` turns evidence into a few grounded directions.
+3. `prd` turns selected directions into reviewed, resumable PRDs.
+4. `create-projects` makes one local repository per approved PRD.
+5. `build-project` is copied into each created project and resumes the first unfinished PRD step.
 
 ## Start here
 
-Install with the open skills CLI:
+Clone the repository and enter it using your normal shell:
 
 ```sh
-npx skills@latest add <owner>/aviator-hamster-skills
+git clone <repository-url>
+cd aviator-hamster-skills
 ```
 
-Then run `/setup`, or simply say what you want to build. Every skill can perform a short inline setup if this is your first command.
+Launch Codex or Claude Code from inside this folder. The clone already contains committed host-specific copies under `.agents/skills` and `.claude/skills`.
+
+- Inside Codex, type `$setup` or open `/skills` and select `setup`.
+- Inside Claude Code, type `/setup`.
+
+Do not enter `$setup` or `/setup` at your normal shell prompt; they are agent instructions, not shell programs. Every skill can also perform a short inline setup when you describe what you want to build.
+
+### Optional global installation
+
+During setup, Aviator Hamster can ask permission to make all five skills available from every project. Nothing is installed globally without approval. To install directly instead, run this from the clone and replace the agent value with the host you use:
+
+```sh
+npx skills@latest add . --global --agent <codex|claude-code> --skill setup brainstorm prd create-projects build-project --yes
+```
+
+You can also install from a published repository without cloning:
+
+```sh
+npx skills@latest add <owner>/aviator-hamster-skills --global --agent <codex|claude-code> --skill setup brainstorm prd create-projects build-project --yes
+```
 
 The package stores its own private profile and journal under `~/.aviator-hamster/`. It never stores credentials, commits that directory, or sends its journal anywhere. GitHub publication is always a separate, explicit decision after local repositories have been created and committed.
 

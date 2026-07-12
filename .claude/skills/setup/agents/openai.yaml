@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set up Aviator Hamster"
+  short_description: "Set up private local context for project discovery."
+  default_prompt: "Set up Aviator Hamster so I can turn a real lead into a project."

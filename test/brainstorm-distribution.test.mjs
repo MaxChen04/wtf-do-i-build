@@ -2,8 +2,9 @@ import assert from "node:assert/strict";
 import { access, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import test from "node:test";
+import { fileURLToPath } from "node:url";
 
-const root = new URL("..", import.meta.url).pathname;
+const root = fileURLToPath(new URL("..", import.meta.url));
 
 test("bundles discovery validation and requires every discovery-template heading", async () => {
   const skill = await readFile(join(root, "skills", "brainstorm", "SKILL.md"), "utf8");

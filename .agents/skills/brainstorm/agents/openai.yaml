@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brainstorm a project"
+  short_description: "Turn a real lead into grounded project directions."
+  default_prompt: "I want to build something but do not know what. Help me find a grounded project direction."
