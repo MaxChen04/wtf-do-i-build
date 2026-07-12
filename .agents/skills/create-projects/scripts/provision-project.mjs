@@ -87,7 +87,7 @@ export async function provisionProject({ projectPath, prdPath, projectName }) {
     }
   }
   if (!await exists(join(projectPath, "skills-lock.json"))) {
-    await writeFile(join(projectPath, "skills-lock.json"), JSON.stringify({ schema_version: 1, skills: [{ name: "build-project", source: "aviator-hamster-skills", scope: "project", rationale: "Executes the approved PRD in verified units." }] }, null, 2) + "\n", "utf8");
+    await writeFile(join(projectPath, "skills-lock.json"), JSON.stringify({ schema_version: 1, skills: [{ name: "build-project", source: "wtfdoibuild", scope: "project", rationale: "Executes the approved PRD in verified units." }] }, null, 2) + "\n", "utf8");
   }
 
   const { stdout } = await runGit(projectPath, ["status", "--porcelain"]);
