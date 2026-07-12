@@ -29,4 +29,14 @@ Otherwise generate four directions. Add up to two only when the evidence support
 
 ## Complete
 
-Fill [the discovery template](assets/discovery-template.md), set its status to `directions-selected` only after an explicit user selection, append lifecycle events with `scripts/journal.mjs`, and offer `/prd`. Never use capability evidence to originate a direction and never claim all options are equally good to avoid a recommendation.
+Fill [the discovery template](assets/discovery-template.md) rather than drafting a new shape. Preserve every heading from the discovery template exactly. The evidence labels must be Markdown `###` headings—`### Direct evidence`, `### Bounded inference`, `### Conflicts`, and `### Gaps`—not bold bullets or prose labels; write `None identified` when a section has no content. Set status to `directions-selected` only after an explicit user selection.
+
+Run the bundled validator before completion from the repository root, using the first path that exists:
+
+```sh
+node .agents/skills/brainstorm/scripts/validate-artifacts.mjs <discovery.md>
+node .claude/skills/brainstorm/scripts/validate-artifacts.mjs <discovery.md>
+node skills/brainstorm/scripts/validate-artifacts.mjs <discovery.md>
+```
+
+Do not claim completion when that command reports an issue. Append lifecycle events with `scripts/journal.mjs`, then offer `/prd`. Never use capability evidence to originate a direction and never claim all options are equally good to avoid a recommendation.

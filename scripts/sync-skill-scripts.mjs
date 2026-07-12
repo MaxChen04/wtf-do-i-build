@@ -7,6 +7,7 @@ const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const copies = [
   ["journal.mjs", "skills/setup/scripts/journal.mjs"],
   ["journal.mjs", "skills/brainstorm/scripts/journal.mjs"],
+  ["validate-artifacts.mjs", "skills/brainstorm/scripts/validate-artifacts.mjs"],
   ["journal.mjs", "skills/prd/scripts/journal.mjs"],
   ["journal.mjs", "skills/create-projects/scripts/journal.mjs"],
   ["validate-artifacts.mjs", "skills/prd/scripts/validate-artifacts.mjs"],

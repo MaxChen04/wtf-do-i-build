@@ -6,6 +6,24 @@ import test from "node:test";
 
 import { validateArtifact } from "../scripts/validate-artifacts.mjs";
 
+test("accepts a selected discovery brief with separate evidence and inference", async () => {
+  const folder = await mkdtemp(join(tmpdir(), "aviator-hamster-discovery-"));
+  const file = join(folder, "discovery.md");
+  await writeFile(file, `# Discovery brief\n\nSchema-Version: 1\nStatus: directions-selected\n\n## Resume here\nNext action: invoke /prd.\n\n## Stated lead and goal\nA real lead.\n\n## Source ledger\n| Source | Consent | What it established | Provenance |\n| --- | --- | --- | --- |\n| Conversation | yes | A repeated handoff problem | direct statement |\n\n## Questions and answers\n| ID | Question | Answer | Why it mattered |\n| --- | --- | --- | --- |\n| Q1 | Who is affected? | Coordinators | Defines the user |\n\n## Prior builds and access\nThe user has access to coordinators.\n\n## Evidence, inference, conflicts, and gaps\n### Direct evidence\n- Coordinators lose handoff details.\n\n### Bounded inference\n- Medium confidence: a narrow handoff flow may help.\n\n### Conflicts\n- None.\n\n### Gaps\n- Current workaround.\n\n## Readiness verdict\nReady because the workflow and access are specific.\n\n## Candidate directions\n### D1 — Handoff Builder\n- Status: build-worthy\n### D2 — Incoming Briefing\n- Status: build-worthy\n### D3 — Open Loop Board\n- Status: build-worthy\n### D4 — Quality Review\n- Status: build-worthy\n\n## Recommendation\nRecommend D1.\n\n## Selected directions\n- D1 — Handoff Builder — explicitly selected.\n\nNext action: invoke /prd.\n`, "utf8");
+
+  assert.deepEqual(await validateArtifact(file), []);
+});
+
+test("reports a discovery brief that collapses direct evidence and inference", async () => {
+  const folder = await mkdtemp(join(tmpdir(), "aviator-hamster-discovery-"));
+  const file = join(folder, "discovery.md");
+  await writeFile(file, "# Discovery brief\n\nSchema-Version: 1\nStatus: directions-selected\n\n## Resume here\n", "utf8");
+
+  const issues = await validateArtifact(file);
+  assert.ok(issues.some((issue) => issue.includes("Direct evidence")));
+  assert.ok(issues.some((issue) => issue.includes("Candidate directions")));
+});
+
 test("accepts a resumable PRD with the required handoff structure", async () => {
   const folder = await mkdtemp(join(tmpdir(), "aviator-hamster-prd-"));
   const file = join(folder, "prd.md");

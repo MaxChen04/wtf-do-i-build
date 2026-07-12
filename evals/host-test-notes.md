@@ -13,6 +13,10 @@ The local `codex exec` binary could not start because its installed native execu
 
 On 2026-07-12, two bounded Claude Code `/brainstorm` invocations with synthetic, local-only input were attempted. The second disabled optional MCP servers. Neither returned or wrote an artifact; both were stopped. See `evals/evidence/2026-07-12-interim-parity-run.md`; do not treat either attempt as a successful host equivalence run.
 
-## Required live equivalence run
+## Discovery equivalence evidence — 2026-07-12
+
+Codex and Claude Code each completed the same local-only `/brainstorm` scenario after the distribution and discovery-validation fixes. Both raw artifacts pass the discovery validator and are compared in [the host-equivalence report](evidence/2026-07-12-host-equivalence/report.md).
+
+## Remaining live equivalence run
 
 For one selected fixture, run `/setup`, `/brainstorm`, `/prd`, `/create-projects`, and one `/build-project` step on both hosts. Compare: setup and consent gates, question sequence, source ledger, direction diversity, PRD headings and IDs, validator result, PRD status update, journal event, evidence, and commit boundary. Record differences as host-adapter fixes only; never loosen a product gate for one host.
