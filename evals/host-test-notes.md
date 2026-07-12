@@ -11,7 +11,7 @@ The install copies include each skill's deterministic helper scripts. From the c
 
 The local `codex exec` binary could not start because its installed native executable was missing. This is an environment defect, not proof of host invocation. The Claude CLI was available, but no paid model invocation was run as part of package construction.
 
-On 2026-07-12, a bounded Claude Code `/brainstorm` invocation with synthetic, local-only input was attempted. It did not return or write an artifact after more than 100 seconds and was stopped. See `evals/evidence/2026-07-12-interim-parity-run.md`; do not treat the attempt as a successful host equivalence run.
+On 2026-07-12, two bounded Claude Code `/brainstorm` invocations with synthetic, local-only input were attempted. The second disabled optional MCP servers. Neither returned or wrote an artifact; both were stopped. See `evals/evidence/2026-07-12-interim-parity-run.md`; do not treat either attempt as a successful host equivalence run.
 
 ## Required live equivalence run
 

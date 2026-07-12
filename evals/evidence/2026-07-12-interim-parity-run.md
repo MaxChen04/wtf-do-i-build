@@ -28,6 +28,10 @@ The Claude CLI remained running for more than 100 seconds, wrote no discovery ar
 
 This is an inconclusive host-runner result. It neither passes nor fails the skill's product gates. The clean install and bundled project-provisioner evidence remains valid; the live host invocation must be retried with a minimal host configuration or interactive session.
 
+### Minimal-host retry
+
+A second invocation disabled optional MCP servers with Claude Code's strict MCP configuration and ran under an explicit 75-second alarm. It likewise wrote no artifact or result payload and remained running until manually stopped. The repeated behavior makes this an environment-level runner blocker rather than a one-off integration delay.
+
 ## Next evidence needed
 
 1. Run the same synthetic lead through a live app generation and a minimal Claude Code invocation that returns a `discovery.md`.
