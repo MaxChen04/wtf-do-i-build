@@ -11,7 +11,7 @@ This is a project-local skill. It is installed by `/create-projects`; do not ins
 
 Verify the working directory is a Git repository containing `PRD.md`. If it is not, read `~/.aviator-hamster/projects.md`, list known projects, and print the exact `cd` command for the relevant one. Do not build outside a matching project.
 
-Read the entire PRD, `AGENTS.md`, and relevant local instructions before editing. Resume at the first non-`[x]` build step. Use [host adapters](references/host-adapters.md) only to map actions to tools; they never change product or verification gates.
+Read the entire PRD, `AGENTS.md`, and relevant local instructions before editing. Resume at the first non-`[x]` build step. Read `skills-lock.json` when present and follow [locked skill routing](references/locked-skill-routing.md) before editing so the current step uses the approved relevant skills. Use [host adapters](references/host-adapters.md) only to map actions to tools; they never change product or verification gates.
 
 ## Execute one verifiable unit
 

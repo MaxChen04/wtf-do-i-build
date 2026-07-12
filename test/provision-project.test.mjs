@@ -24,6 +24,7 @@ test("creates an idempotent local PRD repository with a project-local execution 
   assert.match(await readFile(join(target, "README.md"), "utf8"), /Workflow Map/);
   assert.match(await readFile(join(target, "AGENTS.md"), "utf8"), /PRD\.md/);
   assert.match(await readFile(join(target, ".agents", "skills", "build-project", "SKILL.md"), "utf8"), /Build an approved project/);
+  assert.match(await readFile(join(target, ".agents", "skills", "build-project", "references", "locked-skill-routing.md"), "utf8"), /smallest relevant subset/);
   assert.match(await readFile(join(target, ".agents", "skills", "build-project", "scripts", "journal.mjs"), "utf8"), /appendJournalEvent/);
   const { stdout } = await execFileAsync("git", ["-C", target, "log", "--oneline"]);
   assert.equal(stdout.trim().split("\n").length, 1);
