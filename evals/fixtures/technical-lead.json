@@ -1,0 +1,6 @@
+{
+  "name": "technical-lead",
+  "scenario": "A full-stack engineer repeatedly supports a manual operational workflow.",
+  "input": { "lead": "I keep reconciling failed customer imports for a small team.", "prior_build": "I built internal dashboards and enjoy tightening repetitive workflows." },
+  "expected_behaviors": ["asks one high-value question at a time", "uses capability as support rather than intent", "produces distinct grounded directions", "recommends a narrow first wedge"]
+}

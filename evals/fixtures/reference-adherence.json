@@ -1,0 +1,6 @@
+{
+  "name": "reference-adherence",
+  "scenario": "A direction needs a domain scan and the limitations branch must be loaded.",
+  "input": { "selected_direction": "Reduce missed warehouse handoffs.", "requires_domain_scan": true },
+  "expected_behaviors": ["runs the mandatory limitations query", "builds source cards from retrieved URLs", "rejects an all-table-stakes headline", "keeps generated PRD host-neutral"]
+}

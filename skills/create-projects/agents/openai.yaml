@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create project repositories"
+  short_description: "Create local repositories from approved PRDs."
+  default_prompt: "Create a separate local project repository for each approved PRD."

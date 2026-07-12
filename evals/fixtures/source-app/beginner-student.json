@@ -1,0 +1,11 @@
+{
+  "resume_text": "College student with intro programming coursework and a few class projects.",
+  "linkedin_text": "",
+  "links": [],
+  "builder_profile": "swe",
+  "form_data": [
+    { "id": "S1", "type": "multi", "prompt": "What matters most right now?", "branch": "seed", "origin": "default", "answer": ["Internship/career prep"] },
+    { "id": "S2", "type": "multi", "prompt": "What pulls your attention?", "branch": "seed", "origin": "default", "answer": ["Education"] },
+    { "id": "S6", "type": "text", "prompt": "What is something you're meaning to learn?", "branch": "seed", "origin": "default", "answer": "I want a project that proves I can build something useful, not just finish homework." }
+  ]
+}

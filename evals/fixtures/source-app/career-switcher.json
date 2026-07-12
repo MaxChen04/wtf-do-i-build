@@ -1,0 +1,11 @@
+{
+  "resume_text": "Former teacher moving into software, strong curriculum design and mentoring background.",
+  "linkedin_text": "",
+  "links": [],
+  "builder_profile": "pm",
+  "form_data": [
+    { "id": "S1", "type": "multi", "prompt": "What matters most right now?", "branch": "seed", "origin": "default", "answer": ["Ship a portfolio project"] },
+    { "id": "S2", "type": "multi", "prompt": "What pulls your attention?", "branch": "seed", "origin": "default", "answer": ["Education"] },
+    { "id": "S4", "type": "text", "prompt": "What do you do in your free time?", "branch": "seed", "origin": "default", "answer": "I explain hard topics to friends until they click." }
+  ]
+}

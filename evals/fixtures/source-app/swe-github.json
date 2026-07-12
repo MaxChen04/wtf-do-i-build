@@ -1,0 +1,11 @@
+{
+  "resume_text": "Software engineer who built React and TypeScript tools, GitHub automation, and backend APIs.",
+  "linkedin_text": "",
+  "links": ["https://github.com/example/swe"],
+  "builder_profile": "swe",
+  "form_data": [
+    { "id": "S1", "type": "multi", "prompt": "What matters most right now?", "branch": "seed", "origin": "default", "answer": ["Ship a portfolio project"] },
+    { "id": "S2", "type": "multi", "prompt": "What pulls your attention?", "branch": "seed", "origin": "default", "answer": ["AI/LLM Research"] },
+    { "id": "S6", "type": "text", "prompt": "What is something you're meaning to learn?", "branch": "seed", "origin": "default", "answer": "I want to learn how evals make agents trustworthy." }
+  ]
+}

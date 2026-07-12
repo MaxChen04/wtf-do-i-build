@@ -1,0 +1,8 @@
+{
+  "name": "aviator-hamster",
+  "version": "0.1.0",
+  "description": "Turn a real lead into an approved, resumable project without a hosted backend.",
+  "author": { "name": "Aviator Hamster" },
+  "license": "MIT",
+  "keywords": ["product-discovery", "prd", "project-setup", "agent-skills"]
+}

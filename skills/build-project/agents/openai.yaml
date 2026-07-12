@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build an approved project"
+  short_description: "Resume an approved PRD in verifiable units."
+  default_prompt: "Read this project PRD and implement the first unfinished step."

@@ -1,0 +1,11 @@
+{
+  "resume_text": "Full-stack engineer and product-minded builder with React, Node, Python, data pipelines, design systems, and founder-style projects.",
+  "linkedin_text": "Built internal tools, shipped dashboards, and led research-heavy product launches.",
+  "links": ["https://github.com/example/rich", "https://example.com/portfolio"],
+  "builder_profile": "swe",
+  "form_data": [
+    { "id": "S1", "type": "multi", "prompt": "What matters most right now?", "branch": "seed", "origin": "default", "answer": ["Daily Automation", "Ship a portfolio project"] },
+    { "id": "S2", "type": "multi", "prompt": "What pulls your attention?", "branch": "seed", "origin": "default", "answer": ["AI/LLM Research", "Design"] },
+    { "id": "S10", "type": "text", "prompt": "What would you do for a long time without getting bored?", "branch": "seed", "origin": "default", "answer": "Tuning tools until the workflow feels obvious and fast." }
+  ]
+}

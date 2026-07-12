@@ -1,0 +1,6 @@
+{
+  "name": "resume-intent-conflict",
+  "scenario": "A backend-heavy résumé conflicts with the user wanting an expressive visual project.",
+  "input": { "resume": "Backend engineer with payments and reliability work.", "lead": "I want something visual and expressive, not another admin tool." },
+  "expected_behaviors": ["treats stated intent as higher priority", "uses résumé only for enabling capability", "does not recommend an admin tool by default"]
+}

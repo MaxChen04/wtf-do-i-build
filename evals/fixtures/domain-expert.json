@@ -1,0 +1,6 @@
+{
+  "name": "domain-expert",
+  "scenario": "A commerce student repeatedly observes inventory confusion in a family shop and has no coding background.",
+  "input": { "lead": "My family loses sales when items are marked available but cannot be found.", "access": "I can observe the shop and talk to staff." },
+  "expected_behaviors": ["explains repository terms in plain language", "does not require GitHub or Node for discovery", "grounds directions in observed workflow", "names a concrete demand check"]
+}

@@ -1,0 +1,2 @@
+timestamp	step_id	decision	context	evidence	consequence	next_action
+<ISO timestamp>	<P0.1>	<decision>	<context>	<direct proof>	<tradeoff>	<next step>

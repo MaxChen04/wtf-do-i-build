@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write project PRDs"
+  short_description: "Turn selected directions into executable PRDs."
+  default_prompt: "Turn my selected project direction into a reviewed, resumable PRD."

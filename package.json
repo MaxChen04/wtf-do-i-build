@@ -1,0 +1,15 @@
+{
+  "name": "aviator-hamster-skills",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate-artifacts.mjs skills/prd/assets/prd-template.md",
+    "evals": "node evals/run-evals.mjs",
+    "check-distribution": "node scripts/sync-skill-scripts.mjs --check"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

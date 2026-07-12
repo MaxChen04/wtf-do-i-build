@@ -1,0 +1,6 @@
+{
+  "name": "connector-failure",
+  "scenario": "The user accepts a calendar connection but the host connection fails.",
+  "input": { "lead": "I repeatedly reschedule client work around unpredictable meetings.", "calendar_status": "failed" },
+  "expected_behaviors": ["does not cache or request credentials", "continues with conversational evidence", "records the missing calendar evidence", "offers host-supported connection help only when exposed"]
+}
