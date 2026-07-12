@@ -25,17 +25,37 @@ Read [host capabilities](references/host-capabilities.md). Detect, but do not pr
 
 Record unavailable items as unavailable. For a missing prerequisite, explain its user benefit and offer the host's normal installation path instead of treating it as a failure. Never open personal external content during inventory.
 
+Discover local memory metadata with the first packaged path that exists; discovery inspects paths, size, and modification time but does not read memory content:
+
+```sh
+node .agents/skills/setup/scripts/memory-sources.mjs discover --pretty
+node .claude/skills/setup/scripts/memory-sources.mjs discover --pretty
+node skills/setup/scripts/memory-sources.mjs discover --pretty
+```
+
 ## Optional context
 
-Read [connector policy](references/connector-policy.md) and [private context policy](references/private-context-policy.md). Ask separately:
+Read [connector policy](references/connector-policy.md), [memory policy](references/memory-policy.md), and [private context policy](references/private-context-policy.md). Ask separately:
 
 > Relevant context can make the output more personal. Would you like to connect GitHub, connect Google Calendar, or add a recent résumé? Each is optional, and you can review what will be used.
 
 Explain the value of each option before asking. Verify only sources the user authorizes. Copy an approved résumé with its original extension to `~/.aviator-hamster/context/`; do not parse or commit it unless the user asks to use it. Use [the profile template](assets/setup-profile-template.md).
 
+Show every discovered local memory source with its provider, project when present, and path. Ask for consent separately for each discovered source. Also ask separately about ChatGPT cloud memory and Claude cloud memory; mark either unavailable when the current host exposes no supported recall capability. Remember each choice, not a blanket memory choice.
+
+If cloud recall is unavailable and the user provides an exported memory file, rerun discovery with `--include <original-path>`, ask for consent to that imported source, and keep the file in its original location.
+
+After consent, read each accepted local source fresh with the matching packaged script and its discovered ID:
+
+```sh
+node <packaged-memory-script> read --source <source-id>
+```
+
+Use relevant preferences to shorten setup questions, but do not copy raw memory into the profile. If a previously approved source moved or a new source appears, ask before reading it.
+
 ## Complete
 
-Write or update the profile idempotently, initialize the local journal, and append exactly one `setup_completed` event:
+Write or update the profile idempotently, migrating older profiles by adding the memory section without changing earlier choices. Initialize the local journal and append exactly one `setup_completed` event:
 
 ```sh
 node scripts/journal.mjs append --event '{"skill":"setup","event":"setup_completed","session_slug":"<session>","details":{"host":"<host>"}}'

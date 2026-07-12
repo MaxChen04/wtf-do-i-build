@@ -15,6 +15,7 @@ test("ships every behavior fixture required by the skill-first contract", async 
     "no-mcp",
     "connector-failure",
     "malicious-external-source",
+    "memory-context",
     "returning-user",
     "reference-adherence"
   ]) assert.ok(names.has(required), `Missing ${required} fixture.`);

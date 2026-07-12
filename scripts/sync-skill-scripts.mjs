@@ -5,6 +5,8 @@ import { dirname, join } from "node:path";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const copies = [
+  ["memory-sources.mjs", "skills/setup/scripts/memory-sources.mjs"],
+  ["memory-sources.mjs", "skills/brainstorm/scripts/memory-sources.mjs"],
   ["journal.mjs", "skills/setup/scripts/journal.mjs"],
   ["journal.mjs", "skills/brainstorm/scripts/journal.mjs"],
   ["validate-artifacts.mjs", "skills/brainstorm/scripts/validate-artifacts.mjs"],

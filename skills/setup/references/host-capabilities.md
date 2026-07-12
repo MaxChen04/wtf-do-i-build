@@ -6,6 +6,7 @@ Detect capabilities by observing the current host, its documented environment ma
 | --- | --- | --- | --- | --- |
 | Files and shell | workspace tools | shell tools | terminal | ask the user for the local path |
 | Web and GitHub evidence | exposed tools | exposed tools | exposed tools | use conversation and local files |
+| Cloud memory recall | capability exposed by the current host | capability exposed by the current host | capability exposed by the current host | mark unavailable; offer an exported file |
 | Delegation | collaboration if exposed | subagents if exposed | agents if exposed | one agent |
 | Skill location | host-managed | host-managed | host-managed | package directory |
 

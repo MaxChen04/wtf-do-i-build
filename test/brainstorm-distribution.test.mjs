@@ -12,3 +12,12 @@ test("bundles discovery validation and requires every discovery-template heading
   assert.match(skill, /\.claude\/skills\/brainstorm\/scripts\/validate-artifacts\.mjs/);
   await access(join(root, "skills", "brainstorm", "scripts", "validate-artifacts.mjs"));
 });
+
+test("bundles the same fresh memory source reader with setup and brainstorm", async () => {
+  const source = await readFile(join(root, "scripts", "memory-sources.mjs"), "utf8");
+  const setupCopy = await readFile(join(root, "skills", "setup", "scripts", "memory-sources.mjs"), "utf8");
+  const brainstormCopy = await readFile(join(root, "skills", "brainstorm", "scripts", "memory-sources.mjs"), "utf8");
+
+  assert.equal(setupCopy, source);
+  assert.equal(brainstormCopy, source);
+});

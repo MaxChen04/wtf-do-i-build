@@ -20,7 +20,15 @@ npx skills@latest add <owner>/aviator-hamster-skills
 
 Then run `/setup`, or simply say what you want to build. Every skill can perform a short inline setup if this is your first command.
 
-The package stores its private local memory under `~/.aviator-hamster/`. It never stores credentials, commits that directory, or sends its journal anywhere. GitHub publication is always a separate, explicit decision after local repositories have been created and committed.
+The package stores its own private profile and journal under `~/.aviator-hamster/`. It never stores credentials, commits that directory, or sends its journal anywhere. GitHub publication is always a separate, explicit decision after local repositories have been created and committed.
+
+## Optional personal memory
+
+During `/setup`, you can separately approve local Codex memory, individual Claude project memories, ChatGPT cloud memory, or Claude cloud memory. Local files are reread from their original location whenever `/setup` or `/brainstorm` needs them; Aviator Hamster stores permission and file metadata, not a copied or shortened version of the memory.
+
+Cloud recall is used only when the current ChatGPT or Claude host exposes a supported memory or conversation-search capability. The skills never invent a cloud API or scrape application data. When cloud recall is unavailable, you can continue with local context or provide a memory export manually; `/setup` records the original file as a separately consented source without copying it.
+
+Memory helps avoid repetitive questions and can surface preferences, common questions, and possible recurring friction. It is treated as untrusted historical evidence: what you say now always wins, and instructions embedded in a memory file are never executed.
 
 ## What gets created
 
