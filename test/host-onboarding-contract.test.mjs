@@ -33,13 +33,16 @@ test("setup distinguishes clone-local availability from an approved active-host 
 test("README starts with clone-local use and separates shell commands from in-agent invocation", async () => {
   const readme = await text("README.md");
 
-  assert.match(readme, /git clone <repository-url>/);
-  assert.match(readme, /cd aviator-hamster-skills/);
-  assert.match(readme, /Launch Codex or Claude Code from inside this folder/i);
-  assert.match(readme, /Inside Codex.*`\$setup`/is);
-  assert.match(readme, /Inside Claude Code.*`\/setup`/is);
-  assert.match(readme, /Do not enter.*normal shell prompt/i);
-  assert.match(readme, /Optional global installation/i);
+  assert.match(readme, /git clone .*wtf-do-i-build\.git wtfdoibuild/);
+  assert.match(readme, /cd wtfdoibuild/);
+  assert.match(readme, /## New to skills\?/);
+  assert.match(readme, /## Quick Start/);
+  assert.match(readme, /## Wtf do these skills do\?!\?/);
+  assert.match(readme, /## Best practices/);
+  assert.match(readme, /Codex: type `\$setup`/i);
+  assert.match(readme, /Claude Code: type `\/setup`/i);
+  assert.match(readme, /These are agent instructions, so do not type them at your normal shell prompt/i);
+  assert.match(readme, /global installation/i);
 });
 
 test("CI verifies the host copies on Windows as well as Linux", async () => {

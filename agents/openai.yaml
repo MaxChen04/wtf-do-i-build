@@ -1,4 +1,4 @@
 interface:
-  display_name: "Aviator Hamster"
+  display_name: "wtf do I build"
   short_description: "Turn real product leads into buildable projects."
   default_prompt: "I have a real problem or lead. Help me turn it into a project worth building."
