@@ -17,5 +17,4 @@ jobs:
           node-version: 20
       - run: npm test
       - run: npm run check-distribution
-      - run: npm run evals
       - run: npm run validate

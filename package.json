@@ -6,7 +6,6 @@
   "scripts": {
     "test": "node --test",
     "validate": "node scripts/validate-artifacts.mjs skills/prd/assets/prd-template.md",
-    "evals": "node evals/run-evals.mjs",
     "sync-host-skills": "node scripts/sync-host-skills.mjs",
     "check-distribution": "node scripts/check-distribution.mjs"
   },

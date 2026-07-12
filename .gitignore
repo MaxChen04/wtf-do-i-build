@@ -2,3 +2,5 @@
 node_modules/
 coverage/
 .aviator-hamster/
+/docs/
+/evals/

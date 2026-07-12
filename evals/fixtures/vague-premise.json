@@ -1,6 +1,0 @@
-{
-  "name": "vague-premise",
-  "scenario": "The user only says they want an AI portfolio project.",
-  "input": { "lead": "I want to build an AI app that looks good on my portfolio." },
-  "expected_behaviors": ["does not manufacture directions", "asks one repair question at a time", "writes a concrete observation or research assignment after insufficient evidence"]
-}

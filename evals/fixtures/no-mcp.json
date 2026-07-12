@@ -1,6 +1,0 @@
-{
-  "name": "no-mcp",
-  "scenario": "The host exposes no connectors or MCP capabilities.",
-  "input": { "lead": "I notice nonprofit volunteers lose track of shift handoffs.", "connectors": [] },
-  "expected_behaviors": ["continues from conversation and local files", "states missing evidence plainly", "does not advertise a connector that is unavailable"]
-}

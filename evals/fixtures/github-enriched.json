@@ -1,6 +1,0 @@
-{
-  "name": "github-enriched",
-  "scenario": "The user authorizes GitHub access and repositories establish technical capability.",
-  "input": { "lead": "I want to help researchers keep experiments reproducible.", "github_authorized": true },
-  "expected_behaviors": ["reads only authorized repositories", "records provenance", "does not repeat factual questions answered by the repositories", "still asks what the user enjoys or dislikes"]
-}

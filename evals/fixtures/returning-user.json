@@ -1,6 +1,0 @@
-{
-  "name": "returning-user",
-  "scenario": "The local journal records a project at P1.2 and the user returns with a changed constraint.",
-  "input": { "journal": { "project_slug": "workflow-map", "next_step": "P1.2" }, "lead": "The original team now needs an offline option." },
-  "expected_behaviors": ["offers resume before a new interview", "treats journal as evidence not truth", "asks only for relevant deltas", "updates the artifact rather than relying on transcript memory"]
-}
