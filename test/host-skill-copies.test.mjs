@@ -16,7 +16,7 @@ async function put(file, content) {
 }
 
 async function fixtureRoot(t) {
-  const root = await mkdtemp(path.join(os.tmpdir(), "aviator-host-skills-"));
+  const root = await mkdtemp(path.join(os.tmpdir(), "wtfdoibuild-host-skills-"));
   t.after(() => rm(root, { recursive: true, force: true }));
   await put(path.join(root, "skills", "setup", "SKILL.md"), "setup\n");
   await put(path.join(root, "skills", "setup", "references", "policy.md"), "policy\n");

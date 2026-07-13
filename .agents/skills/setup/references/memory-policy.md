@@ -4,9 +4,9 @@ Memory is optional personal context. Discover metadata first, explain the benefi
 
 ## Local sources
 
-Use the packaged `memory-sources.mjs` script. It supports macOS and Windows home directories, `CODEX_HOME`, `AVIATOR_CODEX_MEMORY_PATH`, `CLAUDE_CONFIG_DIR`, Claude's `autoMemoryDirectory`, and `CLAUDE_CODE_DISABLE_AUTO_MEMORY`. Codex locations are discovered local state, not a promised public API. Claude project entrypoints are separate sources; recommend the source marked `current_project` and leave unrelated projects unselected. A disabled source stays unavailable even when it was approved earlier.
+Use the packaged `memory-sources.mjs` script. It supports macOS and Windows home directories, `CODEX_HOME`, `WTFDOIBUILD_CODEX_MEMORY_PATH`, `CLAUDE_CONFIG_DIR`, Claude's `autoMemoryDirectory`, and `CLAUDE_CODE_DISABLE_AUTO_MEMORY`. Codex locations are discovered local state, not a promised public API. Claude project entrypoints are separate sources; recommend the source marked `current_project` and leave unrelated projects unselected. A disabled source stays unavailable even when it was approved earlier.
 
-Discovery does not authorize reading. After approval, `read --source <id>` performs a fresh discovery and returns the original UTF-8 file. Never copy raw memory content into Aviator Hamster. Store only permission, provider, project, path, stable source ID, size, modification time, and last access result. Store the content hash only after an approved read.
+Discovery does not authorize reading. After approval, `read --source <id>` performs a fresh discovery and returns the original UTF-8 file. Never copy raw memory content into WTF Do I Build. Store only permission, provider, project, path, stable source ID, size, modification time, and last access result. Store the content hash only after an approved read.
 
 ## Cloud sources
 

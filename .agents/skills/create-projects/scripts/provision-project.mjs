@@ -42,10 +42,10 @@ async function runGit(path, args) {
   return execFileAsync("git", ["-C", path, ...args], {
     env: {
       ...process.env,
-      GIT_AUTHOR_NAME: process.env.GIT_AUTHOR_NAME ?? "Aviator Hamster",
-      GIT_AUTHOR_EMAIL: process.env.GIT_AUTHOR_EMAIL ?? "aviator-hamster@local",
-      GIT_COMMITTER_NAME: process.env.GIT_COMMITTER_NAME ?? "Aviator Hamster",
-      GIT_COMMITTER_EMAIL: process.env.GIT_COMMITTER_EMAIL ?? "aviator-hamster@local"
+      GIT_AUTHOR_NAME: process.env.GIT_AUTHOR_NAME ?? "WTF Do I Build",
+      GIT_AUTHOR_EMAIL: process.env.GIT_AUTHOR_EMAIL ?? "wtfdoibuild@local",
+      GIT_COMMITTER_NAME: process.env.GIT_COMMITTER_NAME ?? "WTF Do I Build",
+      GIT_COMMITTER_EMAIL: process.env.GIT_COMMITTER_EMAIL ?? "wtfdoibuild@local"
     }
   });
 }

@@ -5,7 +5,7 @@ description: Turn a real problem, observation, domain access, prior build, or pa
 
 # Brainstorm a grounded project
 
-Create a durable `discovery.md`; do not create a PRD or repository in this skill. If `~/.aviator-hamster/setup.md` is missing, perform the short inline inventory from `/setup` and continue.
+Create a durable `discovery.md`; do not create a PRD or repository in this skill. If `~/.wtfdoibuild/setup.md` is missing, perform the short inline inventory from `/setup` and continue.
 
 ## Open and resume
 

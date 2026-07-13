@@ -38,7 +38,7 @@ Use these canonical names:
 - Private data directory: `~/.wtfdoibuild/`
 - Environment variables: `WTFDOIBUILD_HOME` and `WTFDOIBUILD_CODEX_MEMORY_PATH`
 
-This is a clean cutover. The runtime will not read `~/.aviator-hamster/` and will not accept legacy `AVIATOR_*` variables. Internal helper names, generated headings, temporary test prefixes, setup copy, and Git attribution defaults will use the new or behavior-based names.
+This is a clean cutover. The runtime will not read the prior private-data namespace or accept prior environment-variable aliases. Internal helper names, generated headings, temporary test prefixes, setup copy, and Git attribution defaults will use the new or behavior-based names.
 
 Keep accurate upstream P Stack provenance. Leave the LICENSE copyright line unchanged because legal ownership is separate from product branding unless repository evidence explicitly establishes that it is only placeholder copy.
 

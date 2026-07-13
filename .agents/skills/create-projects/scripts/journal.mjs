@@ -20,8 +20,8 @@ export const JOURNAL_EVENTS = new Set([
   "project_abandoned"
 ]);
 
-export function resolveAviatorHome(home) {
-  return home ?? process.env.AVIATOR_HAMSTER_HOME ?? join(homedir(), ".aviator-hamster");
+export function resolveProductHome(home, env = process.env, homeDirectory = homedir()) {
+  return home ?? env.WTFDOIBUILD_HOME ?? join(homeDirectory, ".wtfdoibuild");
 }
 
 function assertEvent(event) {
@@ -39,7 +39,7 @@ function assertEvent(event) {
 }
 
 async function journalPath(home) {
-  const root = resolveAviatorHome(home);
+  const root = resolveProductHome(home);
   await mkdir(root, { recursive: true });
   return join(root, "journal.jsonl");
 }
@@ -84,7 +84,7 @@ function projectState(entry, current) {
 }
 
 export async function buildProjectsRollup(home) {
-  const root = resolveAviatorHome(home);
+  const root = resolveProductHome(home);
   const entries = await readJournal(root);
   const projects = new Map();
   for (const entry of entries) {
@@ -95,7 +95,7 @@ export async function buildProjectsRollup(home) {
     .sort((a, b) => a.slug.localeCompare(b.slug))
     .map((project) => `- **${project.slug}** — ${project.status ?? "planned"}; next: ${project.nextStep ?? "confirm next step"}${project.path ? `; path: ${project.path}` : ""}${project.publication ? `; GitHub: ${project.publication}` : ""}`);
   const rollup = [
-    "# Aviator Hamster projects",
+    "# WTF Do I Build projects",
     "",
     "This local-only rollup is regenerated from `journal.jsonl`. The PRD remains the source of truth.",
     "",

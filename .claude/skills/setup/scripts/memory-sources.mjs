@@ -27,7 +27,7 @@ export function resolveMemoryLocations({
   return {
     codexDirectory: pathApi.join(codexHome, "memories"),
     codexFallbackDirectory: defaultCodexDirectory,
-    codexOverride: env.AVIATOR_CODEX_MEMORY_PATH || null,
+    codexOverride: env.WTFDOIBUILD_CODEX_MEMORY_PATH || null,
     claudeConfigDirectory: env.CLAUDE_CONFIG_DIR || pathApi.join(homeDir, ".claude"),
     homeDirectory: homeDir
   };

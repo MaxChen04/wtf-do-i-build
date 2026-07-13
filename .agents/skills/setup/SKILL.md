@@ -1,11 +1,11 @@
 ---
 name: setup
-description: Set up Aviator Hamster's private local context, capability inventory, and project journal. Use when a user wants to start product discovery, connect optional GitHub, calendar, or resume context, ask what is available, or says they are using this package for the first time.
+description: Set up WTF Do I Build's private local context, capability inventory, and project journal. Use when a user wants to start product discovery, connect optional GitHub, calendar, or resume context, ask what is available, or says they are using this package for the first time.
 ---
 
-# Set up Aviator Hamster
+# Set up WTF Do I Build
 
-Create or update `~/.aviator-hamster/setup.md` without blocking the user from continuing. This profile is local-only, contains no credentials, and records availability rather than guessed capabilities.
+Create or update `~/.wtfdoibuild/setup.md` without blocking the user from continuing. This profile is local-only, contains no credentials, and records availability rather than guessed capabilities.
 
 ## First minute
 
@@ -21,9 +21,9 @@ Determine whether this skill was loaded from a repository-local `.agents/skills/
 npx skills@latest list --global --agent <codex|claude-code> --json
 ```
 
-When the complete Aviator Hamster set is repository-local but not global, ask:
+When the complete WTF Do I Build set is repository-local but not global, ask:
 
-> Aviator Hamster currently works inside this folder. Make it available in all your projects? You can also keep it here only.
+> WTF Do I Build currently works inside this folder. Make it available in all your projects? You can also keep it here only.
 
 Run a global installation only after explicit approval, and install for the active host only:
 
@@ -59,7 +59,7 @@ Read [connector policy](references/connector-policy.md), [memory policy](referen
 
 > Relevant context can make the output more personal. Would you like to connect GitHub, connect Google Calendar, or add a recent résumé? Each is optional, and you can review what will be used.
 
-Explain the value of each option before asking. Verify only sources the user authorizes. Copy an approved résumé with its original extension to `~/.aviator-hamster/context/`; do not parse or commit it unless the user asks to use it. Use [the profile template](assets/setup-profile-template.md).
+Explain the value of each option before asking. Verify only sources the user authorizes. Copy an approved résumé with its original extension to `~/.wtfdoibuild/context/`; do not parse or commit it unless the user asks to use it. Use [the profile template](assets/setup-profile-template.md).
 
 Show every discovered local memory source with its provider, project when present, and path. Ask for consent separately for each discovered source. Also ask separately about ChatGPT cloud memory and Claude cloud memory; mark either unavailable when the current host exposes no supported recall capability. Remember each choice, not a blanket memory choice.
 

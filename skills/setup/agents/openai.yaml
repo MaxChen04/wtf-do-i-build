@@ -1,4 +1,4 @@
 interface:
-  display_name: "Set up Aviator Hamster"
+  display_name: "Set up WTF Do I Build"
   short_description: "Set up private local context for project discovery."
-  default_prompt: "Set up Aviator Hamster so I can turn a real lead into a project."
+  default_prompt: "Set up WTF Do I Build so I can turn a real lead into a project."

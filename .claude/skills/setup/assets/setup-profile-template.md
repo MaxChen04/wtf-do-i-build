@@ -1,4 +1,4 @@
-# Aviator Hamster setup
+# WTF Do I Build setup
 
 Schema-Version: 2
 

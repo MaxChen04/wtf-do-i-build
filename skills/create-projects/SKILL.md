@@ -1,6 +1,6 @@
 ---
 name: create-projects
-description: Create one isolated local git repository for each approved Aviator Hamster PRD, add the approved handoff and project-local execution profile, and optionally publish after explicit approval. Use when a user asks to set up a project, create a repository from a PRD, or turn approved plans into local projects.
+description: Create one isolated local git repository for each approved WTF Do I Build PRD, add the approved handoff and project-local execution profile, and optionally publish after explicit approval. Use when a user asks to set up a project, create a repository from a PRD, or turn approved plans into local projects.
 ---
 
 # Create approved projects

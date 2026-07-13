@@ -13,7 +13,7 @@ import {
 } from "../scripts/memory-sources.mjs";
 
 async function temporaryHome(t) {
-  const directory = await mkdtemp(path.join(os.tmpdir(), "aviator-memory-"));
+  const directory = await mkdtemp(path.join(os.tmpdir(), "wtfdoibuild-memory-"));
   t.after(() => rm(directory, { recursive: true, force: true }));
   return directory;
 }
@@ -71,7 +71,7 @@ test("discovers Codex entrypoint and summary without scanning unrelated memory f
   assert.ok(result.sources.every((source) => !source.path.includes("automations")));
 });
 
-test("Codex explicit file override replaces the default location", async (t) => {
+test("WTF Do I Build Codex memory override replaces the default location", async (t) => {
   const homeDir = await temporaryHome(t);
   const override = path.join(homeDir, "chosen", "profile.md");
   await put(override, "chosen\n");
@@ -79,7 +79,7 @@ test("Codex explicit file override replaces the default location", async (t) => 
 
   const result = await discoverMemorySources({
     homeDir,
-    env: { AVIATOR_CODEX_MEMORY_PATH: override },
+    env: { WTFDOIBUILD_CODEX_MEMORY_PATH: override },
     platform: process.platform
   });
 
@@ -97,7 +97,7 @@ test("falls back to default Codex memory when configured locations are unavailab
   const result = await discoverMemorySources({
     homeDir,
     env: {
-      AVIATOR_CODEX_MEMORY_PATH: path.join(homeDir, "missing.md"),
+      WTFDOIBUILD_CODEX_MEMORY_PATH: path.join(homeDir, "missing.md"),
       CODEX_HOME: path.join(homeDir, "missing-codex-home")
     },
     platform: process.platform

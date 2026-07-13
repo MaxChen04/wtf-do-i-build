@@ -1,6 +1,6 @@
 ---
 name: prd
-description: Turn one or more selected Aviator Hamster directions into grounded, executable, educational, and resumable product requirements documents. Use when a user wants to turn an idea into a plan, asks for a PRD, has selected project directions, or wants a build-ready specification.
+description: Turn one or more selected WTF Do I Build directions into grounded, executable, educational, and resumable product requirements documents. Use when a user wants to turn an idea into a plan, asks for a PRD, has selected project directions, or wants a build-ready specification.
 ---
 
 # Create reviewed PRDs

@@ -4,10 +4,15 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
 
-import { appendJournalEvent, buildProjectsRollup, readJournal } from "../scripts/journal.mjs";
+import { appendJournalEvent, buildProjectsRollup, readJournal, resolveProductHome } from "../scripts/journal.mjs";
+
+test("uses the WTF Do I Build home directory and environment variable", () => {
+  assert.equal(resolveProductHome(undefined, { WTFDOIBUILD_HOME: "/tmp/wtf-home" }, "/Users/Ada"), "/tmp/wtf-home");
+  assert.equal(resolveProductHome(undefined, {}, "/Users/Ada"), "/Users/Ada/.wtfdoibuild");
+});
 
 test("appends schema-checked events and builds a deterministic project rollup", async () => {
-  const home = await mkdtemp(join(tmpdir(), "aviator-hamster-"));
+  const home = await mkdtemp(join(tmpdir(), "wtfdoibuild-"));
 
   await appendJournalEvent({
     home,
@@ -47,13 +52,14 @@ test("appends schema-checked events and builds a deterministic project rollup", 
   assert.equal(entries[0].schema_version, 1);
 
   const rollup = await buildProjectsRollup(home);
+  assert.match(rollup, /# WTF Do I Build projects/);
   assert.match(rollup, /workflow-map/);
   assert.match(rollup, /P0\.2/);
   assert.equal(await readFile(join(home, "projects.md"), "utf8"), rollup);
 });
 
 test("rejects an event with an unknown lifecycle name", async () => {
-  const home = await mkdtemp(join(tmpdir(), "aviator-hamster-"));
+  const home = await mkdtemp(join(tmpdir(), "wtfdoibuild-"));
   await assert.rejects(
     appendJournalEvent({
       home,

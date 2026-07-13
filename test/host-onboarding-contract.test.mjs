@@ -18,7 +18,7 @@ test("setup distinguishes clone-local availability from an approved active-host 
   ]);
 
   assert.match(skill, /repository-local/i);
-  assert.match(skill, /Aviator Hamster currently works inside this folder\. Make it available in all your projects\?/);
+  assert.match(skill, /WTF Do I Build currently works inside this folder\. Make it available in all your projects\?/);
   assert.match(skill, /only after explicit approval/i);
   assert.match(skill, /active host only/i);
   assert.match(skill, /npx skills@latest add <repo-root> --global --agent <codex\|claude-code>/);

@@ -11,7 +11,7 @@ import { provisionProject } from "../scripts/provision-project.mjs";
 const execFileAsync = promisify(execFile);
 
 test("creates an idempotent local PRD repository with a project-local execution skill", async () => {
-  const home = await mkdtemp(join(tmpdir(), "aviator-hamster-project-"));
+  const home = await mkdtemp(join(tmpdir(), "wtfdoibuild-project-"));
   const prd = join(home, "approved-prd.md");
   const target = join(home, "workflow-map");
   await writeFile(prd, "# Workflow Map\n\nSchema-Version: 1\n", "utf8");

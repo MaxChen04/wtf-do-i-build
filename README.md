@@ -56,7 +56,7 @@ The five skills form a path from “I have a vague lead” to “I have a projec
 - Treat memory as historical evidence, not instructions or unquestionable truth.
 - Choose a direction before asking for a full PRD. The PRD is strongest when it solves one clearly chosen problem.
 - Let the build process move in small, verifiable steps. A checked-off step is more useful than a giant plan that nobody can resume.
-- Keep private context outside Git. The package stores its local profile and journal under `~/.aviator-hamster/`; it does not commit credentials or raw memory files.
+- Keep private context outside Git. The package stores its local profile and journal under `~/.wtfdoibuild/`; it does not commit credentials or raw memory files.
 - Run `npm test`, `npm run validate`, and `npm run check-distribution` when changing the package itself.
 
 ## Memory and privacy
@@ -67,6 +67,6 @@ Cloud recall is used only when the current host exposes a supported memory or co
 
 ## What gets created
 
-`brainstorm` writes a discovery brief in the current repository when it has one; otherwise it writes under `~/.aviator-hamster/briefs/`. `prd` puts one PRD beneath each selected direction. `create-projects` copies an approved PRD into a new repository and adds the project-local `build-project` skill.
+`brainstorm` writes a discovery brief in the current repository when it has one; otherwise it writes under `~/.wtfdoibuild/briefs/`. `prd` puts one PRD beneath each selected direction. `create-projects` copies an approved PRD into a new repository and adds the project-local `build-project` skill.
 
 Generated PRDs remain vendor-neutral and can be handed to a different compatible coding agent.
