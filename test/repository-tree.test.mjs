@@ -14,7 +14,8 @@ test("keeps internal documentation and evaluations out of the public tree", asyn
     readFile(path.join(root, ".claude-plugin", "plugin.json"), "utf8").then(JSON.parse)
   ]);
 
-  assert.match(gitignore, /^\/docs\/$/m);
+  assert.match(gitignore, /^\/projects\/$/m);
+  assert.doesNotMatch(gitignore, /^\/docs\/$/m);
   assert.match(gitignore, /^\/evals\/$/m);
   assert.equal(packageJson.name, "wtfdoibuild");
   assert.equal(plugin.name, "wtfdoibuild");

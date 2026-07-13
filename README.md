@@ -67,6 +67,6 @@ Cloud recall is used only when the current host exposes a supported memory or co
 
 ## What gets created
 
-`brainstorm` writes a discovery brief in the current repository when it has one; otherwise it writes under `~/.wtfdoibuild/briefs/`. `prd` puts one PRD beneath each selected direction. `create-projects` copies an approved PRD into a new repository and adds the project-local `build-project` skill.
+Inside a repository, `brainstorm` writes each discovery brief to `projects/<session-slug>/discovery.md`, and `prd` writes each selected direction to `projects/prds/<direction-slug>/prd.md`. Outside a repository, private briefs remain under `~/.wtfdoibuild/briefs/`. `create-projects` copies an approved PRD into a new repository and adds the project-local `build-project` skill.
 
 Generated PRDs remain vendor-neutral and can be handed to a different compatible coding agent.

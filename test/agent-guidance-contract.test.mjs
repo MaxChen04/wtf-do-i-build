@@ -24,3 +24,14 @@ test("model guidance recommends separate questioning and PRD synthesis routes", 
   assert.match(guidance, /Fable 5.*High/i);
   assert.match(guidance, /closest available/i);
 });
+
+test("repository artifacts use the projects tree", async () => {
+  const [sourcePolicy, prdSkill] = await Promise.all([
+    readFile(new URL("../skills/brainstorm/references/source-policy.md", import.meta.url), "utf8"),
+    readFile(new URL("../skills/prd/SKILL.md", import.meta.url), "utf8")
+  ]);
+
+  assert.match(sourcePolicy, /projects\/<session-slug>\/discovery\.md/);
+  assert.doesNotMatch(sourcePolicy, /docs\/project-briefs/);
+  assert.match(prdSkill, /projects\/prds\/<direction-slug>\/prd\.md/);
+});

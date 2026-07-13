@@ -5,7 +5,7 @@ description: Turn one or more selected WTF Do I Build directions into grounded, 
 
 # Create reviewed PRDs
 
-Create one `prd.md` per selected direction. Do not create local folders, repositories, installs, or GitHub remotes; those are `/create-projects` decisions. If setup is missing, perform the short inline setup and continue.
+Create one `prd.md` per selected direction at `projects/prds/<direction-slug>/prd.md` when working inside a repository. Outside a repository, place it beneath the selected direction's existing private brief under `~/.wtfdoibuild/briefs/`. Creating these artifact folders does not create a project repository; do not create standalone repositories, installs, or GitHub remotes because those are `/create-projects` decisions. If setup is missing, perform the short inline setup and continue.
 
 ## Gate and prepare
 

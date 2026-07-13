@@ -22,3 +22,10 @@ test("bundles the same fresh memory source reader with setup and brainstorm", as
   assert.equal(setupCopy, source);
   assert.equal(brainstormCopy, source);
 });
+
+test("asks the opening question immediately after brainstorm analysis", async () => {
+  const skill = await readFile(join(root, "skills", "brainstorm", "SKILL.md"), "utf8");
+
+  assert.match(skill, /After completing (?:the )?setup, resume, and relevant-memory analysis, immediately ask the opening question/i);
+  assert.match(skill, /Do not send a separate analysis recap, progress update, or readiness preamble before that question/i);
+});
